@@ -14,15 +14,15 @@ public class TokoBuku {
         System.out.println(String.format("%-11s   : %s", "Total bayar", Buku.formatRupiah(total)));
 
         /*
-         * Langkah 8 - Hasil percobaan menghapus super(...) di constructor BukuDigital:
+         * Langkah 8 - Pesan error saat baris super(...) dihapus dari constructor BukuDigital:
          *
          * java: constructor Buku in class Buku cannot be applied to given types;
-         *   required: String,String,int
+         *   required: java.lang.String,java.lang.String,int
          *   found:    no arguments
-         *   reason:   actual and formal argument lists differ in length
+         *   reason: actual and formal argument lists differ in length
          *
-         * Penyebab: kalau super(...) tidak ditulis, Java otomatis memanggil super()
-         * tanpa parameter, padahal Buku hanya punya constructor 3 parameter.
+         * Penyebab: tanpa super(...), Java otomatis memanggil super() tanpa parameter,
+         * padahal class Buku hanya punya constructor dengan 3 parameter.
          */
     }
 }
